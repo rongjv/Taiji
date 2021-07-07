@@ -1,0 +1,20 @@
+ ''' <summary>
+    ''' 本函数为自定义函数，绘制圆形图形
+    ''' </summary>
+    ''' <param name="p">图像框</param>
+    ''' <param name="c">颜色</param>
+    Private Sub huayuan(p As PictureBox, c As Color)
+
+        Dim b As Bitmap = New Bitmap(p.Width, p.Height)
+
+        Dim g As Graphics = Graphics.FromImage(b)
+
+        Dim mybrush As New SolidBrush(c)
+
+        g.FillEllipse(mybrush, 0, 0, p.Width, p.Height)
+
+        g.Dispose()
+
+        p.Image = b
+
+    End Sub
